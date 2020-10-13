@@ -5,7 +5,8 @@ public class SudokuController {
     }
 
     static void initNewGame() { // will initiate a new game
-        System.out.println("initNewGame()");
+        SudokuInterface theInterf = new SudokuInterface();
+        theInterf.mainMenu(1);
     }
 
 }
