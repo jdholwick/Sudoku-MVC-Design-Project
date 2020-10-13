@@ -1,6 +1,12 @@
 public class Main {
 
     public static void main(String[] args) {
-        System.out.println("Sudoku");
+
+        SudokuController theContr = new SudokuController();
+        SudokuInterface theInterf = new SudokuInterface();
+
+        theContr.initNewGame();
+        theInterf.mainMenu();
+
     }
 }
