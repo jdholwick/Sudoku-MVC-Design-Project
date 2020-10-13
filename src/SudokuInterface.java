@@ -6,7 +6,7 @@ public class SudokuInterface {
 
     }
 
-    static void mainMenu(int iMenuOpt) { // will produce the proper menu options in the moment
+    public static int mainMenu(int iMenuOpt) { // will produce the proper menu options in the moment
         SudokuController theContr = new SudokuController();
 
         Scanner menuInput = new Scanner(System.in);
@@ -31,6 +31,7 @@ public class SudokuInterface {
             theContr.endGame();
         }
 
+        return menuChoice;
     }
 
 }

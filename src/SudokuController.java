@@ -4,12 +4,15 @@ public class SudokuController {
 
     }
 
-    static void initNewGame() { // will initiate a new game
+    public static void initNewGame() { // will initiate a new game
         SudokuInterface theInterf = new SudokuInterface();
-        theInterf.mainMenu(1);
+
+        if (theInterf.mainMenu(1) == 1) {
+            System.out.println("will call Game Board class...");
+        }
     }
 
-    static void endGame() {
+    public static void endGame() {
         System.out.println("So long!");
     }
 
