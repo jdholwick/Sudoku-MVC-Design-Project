@@ -7,9 +7,10 @@ public class SudokuInterface {
     }
 
     static void mainMenu(int iMenuOpt) { // will produce the proper menu options in the moment
-        int menuChoice;
-        Scanner menuInput = new Scanner(System.in);
+        SudokuController theContr = new SudokuController();
 
+        Scanner menuInput = new Scanner(System.in);
+        int menuChoice = 0; // will hold input regarding menu choice for any of the menus
 
         if (iMenuOpt == 1) {
             System.out.println("Welcome to a simple Sudoku game interface!");
@@ -21,6 +22,13 @@ public class SudokuInterface {
         }
         else {
             System.out.println("...");
+        }
+
+        if (menuChoice == 1) {
+            System.out.println("The game would begin here...");
+        }
+        else if (menuChoice == 2) {
+            theContr.endGame();
         }
 
     }

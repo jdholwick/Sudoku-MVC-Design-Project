@@ -9,4 +9,8 @@ public class SudokuController {
         theInterf.mainMenu(1);
     }
 
+    static void endGame() {
+        System.out.println("So long!");
+    }
+
 }
