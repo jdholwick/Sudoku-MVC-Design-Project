@@ -17,8 +17,11 @@ public class SudokuModel {
         // so for now since the concern is more the MVC design, i am using one simple
         // preloaded set of numbers to put into iGameSquares
 
+        // here we'd call out SudokuAlgorithms class to produce a unique Sudoku board
+
         Random rand6 = new Random(); // will be used to select 6 from each column to turn to 0
         int [] i6Count = new int[6]; // will hold seven of integers 1-9 and so each i6Count[k] will represent the j index such that iGameSquare[i][i6Count[k]] == 0
+        //String sBoard = new String(""); // this should be used ideally for the MVC design so that the output can be sent to the SudokuInterface class to display
 
         for (int i = 0; i < 9; i++) { // cycle through each column
             for (int k = 0; k < 6; k++) { // k index is for i6Count[k] (which itself will be j index) so we can hold seven non repeating numbers 1-9
@@ -42,6 +45,7 @@ public class SudokuModel {
             for (int j = 0; j < 9; j++) {
                 if (iGameSquares[i][j] != 0) {
                     if ((j == 2) || (j == 5)) {
+                        //sBoard = sBoard.concat(iGameSquares[i][j] + " |"); // putting the output in a string like this to then be sent to SudokuInterface class would be more appropriate for the MVC design
                         System.out.print(iGameSquares[i][j] + " |"); // prints fraction of vertical border after 3rd and 6th columns
                     }
                     else {
@@ -65,7 +69,4 @@ public class SudokuModel {
         }
     }
 
-    public void randNumLayout() {
-        // iGameSquares would be filled here with a Sudoku algorithm
-    }
 }
