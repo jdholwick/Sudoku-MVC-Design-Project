@@ -9,7 +9,7 @@ public class SudokuController {
         SudokuModel theModel = new SudokuModel();
 
         if (theInterf.mainMenu(1) == 1) {
-            System.out.println("will call Game Board class...");
+            System.out.println("Will call Sudoku Model class...");
             theModel.newBoard();
         }
     }
